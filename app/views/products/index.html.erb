@@ -6,7 +6,7 @@
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-sm-2 col-md-4">
-        <%= render @products %>
+        <%= render partial: "product", locals: {product: product} %>
       </div><!-- col div -->
     <% end %>
   </div><!-- row div -->
