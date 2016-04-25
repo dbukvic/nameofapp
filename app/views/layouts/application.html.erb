@@ -12,16 +12,16 @@
 <body>
 	<nav>
 		<div class="collapse navbar-collapse" id="myNavbar">
-			<form class="navbar-form navbar-right" role="search">
+			<form class="navbar-form navbar-left" role="search">
 				<div class="form-group">
-					<%= form_tag("/products", method: "get") do %>
-					<%= text_field_tag(:q, "Search") %>
-					<%= submit_tag("Search") %>
+					<%= form_tag("/products", method: "get", class: "form-inline") do %>
+					<%= text_field_tag(:q, " ", class: "form-control") %>
+					<%= submit_tag("Search", class: "btn btn-default") %>
 					<% end %>
 				</div>
 			</form>
 			
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-right">
 				<li><%= link_to "Home", static_pages_index_path %></li>
 				<li><%= link_to "About", static_pages_about_path %></li>
 				<li><%= link_to "Contact", static_pages_contact_path %></li>
