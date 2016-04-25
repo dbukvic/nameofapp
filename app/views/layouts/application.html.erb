@@ -11,11 +11,22 @@
 </head>
 <body>
 	<nav>
-		<ul>
-			<li><%= link_to "Home", static_pages_index_path %></li>
-			<li><%= link_to "About", static_pages_about_path %></li>
-			<li><%= link_to "Contact", static_pages_contact_path %></li>
-		</ul>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<%= form_tag("/products", method: "get") do %>
+					<%= text_field_tag(:q, "Search") %>
+					<%= submit_tag("Search") %>
+					<% end %>
+				</div>
+			</form>
+			
+			<ul class="nav navbar-nav">
+				<li><%= link_to "Home", static_pages_index_path %></li>
+				<li><%= link_to "About", static_pages_about_path %></li>
+				<li><%= link_to "Contact", static_pages_contact_path %></li>
+			</ul>	
+		</div> <!-- end navbar collapse -->
 	</nav>
 
 <%= yield %>

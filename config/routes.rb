@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
 
   # You can have the root of your site routed with "root"
-root 'static_pages#about'
+root 'static_pages#landing_page'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
