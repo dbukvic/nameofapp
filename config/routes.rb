@@ -43,6 +43,9 @@ post 'static_pages/thank_you'
   #     resources :comments, :sales
   #     resource :seller
   #   end
+  resources :products do
+    resources :comments
+  end
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
