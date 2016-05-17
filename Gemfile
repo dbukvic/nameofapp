@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.4'
 
 gem 'seed_dump'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
