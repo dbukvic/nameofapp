@@ -28,6 +28,7 @@
       <h1>Comments:</h1>
         <%= render 'new_comment' %>
         <%= render 'comments' %>
+        <%= will_paginate @comments %>
     </div><!-- end comments div-->
 
     <div class="paginate">
