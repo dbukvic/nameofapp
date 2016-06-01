@@ -18,9 +18,7 @@ app.controller('OrdersCtrl', ['$scope', 'models', function($scope, models){
 	$scope.orders = models.orders.query();
 	$scope.products = models.products.query();
 
-}]);
-
-$scope.addOrder = function(){
+	$scope.addOrder = function(){
 	if(!$scope.newOrder.product_id || $scope.newOrder.total === ''){ return; }
 	order = models.orders.save($scope.newOrder, function (){
 		recent_order = models.orders.get({id: order.id});
@@ -29,7 +27,10 @@ $scope.addOrder = function(){
 	});
 }
 
-$scope.deleteOrder = function(order) {
+	$scope.deleteOrder = function(order) {
 	models.orders.delete(order);
 	$scope.order.splice($scope.order.indexOf(order), 1);
 }
+
+}]);
+
