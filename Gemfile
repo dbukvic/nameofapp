@@ -34,8 +34,6 @@ gem 'dalli'
 
 gem 'redis-rails'
 
-gem 'rake'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
