@@ -4,13 +4,15 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <% cache(cache_key_for_products, product) do %>
-        <%= render partial: "product", locals: {product: product} %>
-        <% end %>
-      </div><!-- col div -->
-    <% end %>
+    <% cache(@products) do %>
+      <% @products.each do |product| %>
+        <div class="col-sm-2 col-md-4">
+         <% cache(product) do %>
+          <%= render partial: "product", locals: {product: product} %>
+         <% end %>
+        </div><!-- col div -->
+      <% end %>
+    <% end %> 
   </div><!-- row div -->
 </div><!--container div -->  
 
