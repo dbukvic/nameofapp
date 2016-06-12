@@ -3,13 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {font-family: Arial Rounded MT Bold, Arial Black, Arial, sans-serif; text-align: center; color: #5e3c58; padding-top: 50px;}
 nav ul li {display: inline-block; padding: 20px 10px; float: right;}
-nav {background-color: #bfb5b2; position: fixed; top: 0; width: 100%;}
+navbar {background-color: #bfb5b2; position: fixed; top: 0; width: 100%;}
 nav ul li {color: #2e4045; text-transform: uppercase; letter-spacing: 1px;}
 body {padding-top: 60px;}
 footer {background-color: #bfb5b2; width: 100%; height: 50px;}
 footer .copyright {float: right; padding-top: 15px;}
-h2 {font-family: Arial Rounded MT Bold, Arial Black, Arial, sans-serif; text-align: center; color: #5e3c58; padding-top: 50px;}
+h2 {font-family: Arial Rounded MT Bold, Arial Black, Arial, sans-serif; text-align: center; color: #5e3c58; padding-top: 50px; padding-bottom: 50px;}
 img {margin: 0 auto;}
 .carousel-caption {font-family: Arial Rounded MT Bold, Arial Black, Arial, sans-serif; text-align: center; color: #CCFFCC; font-size: 200%;}
-p {padding-top: 50px;}
-footer {position: fixed; bottom: 0; width: 100%; height: 50px;}
+footer {background-color: #F8F8F8; position: fixed; bottom: 0; width: 100%; height: 50px;}

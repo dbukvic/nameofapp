@@ -19,7 +19,8 @@
     <% end %>
 
 	<nav>
-		<div class="collapse navbar-collapse" id="myNavbar">
+		<div class="navbar navbar-default navbar-fixed-top" id="myNavbar">
+			<div class="container-fluid">
 			<form class="navbar-form navbar-left" role="search">
 				<div class="form-group">
 					<%= form_tag("/products", method: "get", class: "form-inline") do %>
@@ -43,6 +44,7 @@
 				</li>
 			</ul>
 		</div> <!-- end navbar collapse -->
+		</div>
 	</nav>
 
 <%= yield %>

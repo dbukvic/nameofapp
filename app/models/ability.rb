@@ -10,7 +10,7 @@ class Ability
         if user.admin?
          can :manage, :all
         else
-         cannot [:create, :update, :destroy], Product
+         can :read, :all
         end
     end
 
