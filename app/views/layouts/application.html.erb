@@ -20,16 +20,15 @@
 
 	<nav>
 		<div class="navbar navbar-default navbar-fixed-top" id="myNavbar">
-			<div class="container-fluid">
-			<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<%= form_tag("/products", method: "get", class: "form-inline") do %>
-					<%= text_field_tag(:q, " ", class: "form-control") %>
-					<%= submit_tag("Search", class: "btn btn-default") %>
-					<% end %>
-				</div>
-			</form>
-			
+
+			<div id="search-function">
+                		<%= form_tag("/products", method: "get") do %>
+                  		<%= label_tag(:q, "Search for:", class: "search-label sr-only") %>
+                  		<%= text_field_tag(:q) %>
+                  		<%= submit_tag("Search", class: "btn btn-sm") %>
+                		<% end %>
+            </div>
+				
 			<ul class="nav navbar-nav navbar-right">
 				<li><%= link_to "Home", static_pages_index_path %></li>
 				<li><%= link_to "About", static_pages_about_path %></li>
@@ -41,6 +40,9 @@
 				<% else %>
 					<%= link_to('Login', new_user_session_path) %>
 				<% end %>	
+				</li>
+				<li>
+					
 				</li>
 			</ul>
 		</div> <!-- end navbar collapse -->
