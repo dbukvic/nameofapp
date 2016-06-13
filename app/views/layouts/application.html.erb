@@ -20,14 +20,6 @@
 
 	<nav>
 		<div class="navbar navbar-default navbar-fixed-top" id="myNavbar">
-
-			<div id="search-function">
-                		<%= form_tag("/products", method: "get") do %>
-                  		<%= label_tag(:q, "Search for:", class: "search-label sr-only") %>
-                  		<%= text_field_tag(:q) %>
-                  		<%= submit_tag("Search", class: "btn btn-sm") %>
-                		<% end %>
-            </div>
 				
 			<ul class="nav navbar-nav navbar-right">
 				<li><%= link_to "Home", static_pages_index_path %></li>
@@ -42,6 +34,13 @@
 				<% end %>	
 				</li>
 				<li>
+					<div id="search-function">
+                		<%= form_tag("/products", method: "get") do %>
+                  		<%= label_tag(:q, "Search for:", class: "search-label sr-only") %>
+                  		<%= text_field_tag(:q) %>
+                  		<%= submit_tag("Search", class: "btn btn-sm") %>
+                		<% end %>
+        			</div>
 					
 				</li>
 			</ul>
